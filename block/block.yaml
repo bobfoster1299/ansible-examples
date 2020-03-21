@@ -1,0 +1,12 @@
+---
+- hosts: centos-7-1
+  tasks:
+    - name: get file
+      block:
+        - get_url:
+            url: "http://centos-7-1/index.html"
+            dest: "/tmp/index_file"
+      rescue:
+        - debug: msg="The file doesn't exist!"
+      always:
+        - debug: msg="Play done!"
