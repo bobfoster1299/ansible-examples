@@ -10,6 +10,6 @@
       replace:
         path: /etc/httpd/conf/httpd.conf
         regexp: '^DocumentRoot.*$'
-        replace: 'DocumentRoot "/opt/www"'
+        replace: 'DocumentRoot "/var/www/html"'
         backup: yes
       notify: "restart web"
