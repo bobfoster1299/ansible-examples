@@ -1,0 +1,12 @@
+---
+all:
+  hosts:
+    centos-7-1
+  children:
+    web:
+      hosts:
+        centos-7-[1:2]
+    db:
+      hosts:
+        centos-7-[3:4]
+
