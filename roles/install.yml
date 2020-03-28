@@ -1,0 +1,7 @@
+---
+- hosts: centos-7-1
+  become: yes
+  roles:
+    - apache
+  vars:
+    apache_server_admin: boblin@example.com
