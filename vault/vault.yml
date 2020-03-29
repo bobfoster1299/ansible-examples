@@ -1,0 +1,8 @@
+---
+- hosts: centos-7-1
+  vars_files:
+    - ./secure
+  tasks:
+    - name: Output message
+      shell: echo {{ message }} > /home/vagrant/deployed.txt
+      no_log: true
