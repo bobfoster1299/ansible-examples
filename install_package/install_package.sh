@@ -9,4 +9,4 @@ else
   exit
 fi
 
-ansible all -i /home/robef3/ansible2/inv.yml -u vagrant -b -m yum -a "name=$1 state=present"
+ansible labservers -i /home/robef3/ansible2/inv.yml -u vagrant -b -m yum -a "name=$1 state=present"
