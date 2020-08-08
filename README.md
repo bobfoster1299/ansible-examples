@@ -36,17 +36,17 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 # Files
 [**inv.yml**](https://github.com/bobfoster1299/ansible2/blob/master/inv.yml) - Inventory file
 
-**playbooks/create_users.yml** - Create multiple users. 
+[**playbooks/create_users.yml**](https://github.com/bobfoster1299/ansible2/blob/master/create_users.yml) - Create multiple users. 
 
-**playbooks/install_package.yml** - Install package, start and enable service, create file, append line to file.
+[**playbooks/install_package.yml**](https://github.com/bobfoster1299/ansible2/blob/master/install_package.yml) - Install package, start and enable service, create file, append line to file.
 
-**playbooks/add_line_when.yml** - Append line to file when hostname matches.
+[**playbooks/add_line_when.yml**](https://github.com/bobfoster1299/ansible2/blob/master/add_line_when.yml) - Append line to file when hostname matches.
 
-**playbooks/register_output.yml** - Register output of task, display output to terminal, and write one element of the output to a file.
+[**playbooks/register_output.yml**](https://github.com/bobfoster1299/ansible2/blob/master/register_output.yml) - Register output of task, display output to terminal, and write one element of the output to a file.
 
-**playbooks/block.yml** - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
+[**playbooks/block.yml**](https://github.com/bobfoster1299/ansible2/blob/master/block.yml) - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
 
-**playbooks/ignore_errors.yml** - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
+[**playbooks/ignore_errors.yml**](https://github.com/bobfoster1299/ansible2/blob/master/ignore_errors.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
 
-**playbooks/stop_service** - Stop and disable service.
+[**playbooks/stop_service**](https://github.com/bobfoster1299/ansible2/blob/master/stop_service.yml) - Stop and disable service.
 
