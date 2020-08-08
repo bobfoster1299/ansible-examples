@@ -36,7 +36,9 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 # Files
 [inv.yml](inv.yml) - Inventory file
 
-[playbooks/create_users.yml](playbooks/create_users.yml) - Creates multiple users. 
+[playbooks/create_users.yml](playbooks/create_users.yml)
+
+Creates multiple users. 
 
 [playbooks/install_package.yml](playbooks/install_package.yml) - Installs package, starts and enables service, creates file, appends line to file.
 
@@ -62,3 +64,5 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 ```
 ansible-playbook -i ../../inv.yml -u ansible tags.yaml --tags dbdeploy
 ```
+
+[playbooks/variables/*](playbooks/variables) - 
