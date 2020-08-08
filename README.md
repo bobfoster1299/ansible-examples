@@ -60,7 +60,7 @@ ansible-playbook -i inv.yml --limit centos-7-1 -u ansible create_users.yml
 
 [tags/*](tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
 ```
-ansible-playbook -i ../inv.yml -u ansible tags.yaml --tags dbdeploy
+ansible-playbook -i ../inv.yml -u ansible tags.yml --tags dbdeploy
 ```
 
 [variables/*](variables) - Assigns a file path to a variable and creates a file from the variable. You reference another file called user.lst via the command line to populate the file:
