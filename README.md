@@ -55,3 +55,5 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 [playbooks/handler.yml](playbooks/handler.yml) - Replace line in file and notify handler to restart service.
 
 [playbooks/unarchive.yml](playbooks/unarchive.yml) - Install apache, start and enable service, download content from URL, unarchive it.
+
+[playbooks/template_example/*](playbooks/template_example) - Create a file which contains facts about the target.
