@@ -1,5 +1,5 @@
 ---
-- hosts: centos-7-1
+- hosts: all
   become: yes
   handlers:
     - name: restart apache

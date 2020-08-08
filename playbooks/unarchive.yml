@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: all
   become: yes
   tasks:
     - name: install httpd
@@ -7,6 +7,6 @@
     - name:  start and enable httpd
       service: name=httpd state=started enabled=yes
     - name: retrieve website from repo
-      get_url: url=http://repo.example.com/website.tgz dest=/tmp/website.tgz
+      get_url: url=http://centos-7-1/content.tar.gz dest=/tmp/content.tar.gz
     - name: install website
-      unarchive: remote_src=yes src=/tmp/website.tgz dest=/var/www/html
+      unarchive: remote_src=yes src=/tmp/content.tar.gz dest=/var/www/html
