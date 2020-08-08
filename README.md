@@ -29,7 +29,7 @@ Add your SSH public key to the authorized_keys file. You should then be able to 
 
 Test that it's working:
 ```
-ansible -i inv.yml centos-7-1 -m ping -u ansible
+ansible -i inv.yml <hostname> -m ping -u ansible
 ```
 
 # Files
