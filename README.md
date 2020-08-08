@@ -42,12 +42,12 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 
 [playbooks/add_line_when.yml](playbooks/add_line_when.yml) - Append line to file when hostname matches.
 
-[**playbooks/register_output.yml**](playbooks/register_output.yml) - Register output of task, display output to terminal, and write one element of the output to a file.
+[playbooks/register_output.yml](playbooks/register_output.yml) - Register output of task, display output to terminal, and write one element of the output to a file.
 
-[**playbooks/block.yml**](playbooks/block.yml) - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
+[playbooks/block.yml](playbooks/block.yml) - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
 
-[**playbooks/ignore_errors.yml**](playbooks/ignore_errors.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
+[playbooks/ignore_errors.yml](playbooks/ignore_errors.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
 
-[**playbooks/stop_service.yml**](playbooks/stop_service.yml) - Stop and disable service.
+[playbooks/stop_service.yml](playbooks/stop_service.yml) - Stop and disable service.
 
-[**playbooks/replace.yml**](playbooks/replace.yml) - Download a file and replace some lines in it with a regular expression. If the file cannot be downloaded display a debug error. 
+[playbooks/replace.yml](playbooks/replace.yml) - Download a file and replace some lines in it with a regular expression. If the file cannot be downloaded display a debug error. 
