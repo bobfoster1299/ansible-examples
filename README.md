@@ -14,9 +14,6 @@ touch 10_ansible
 echo "ansible    ALL=(ALL)       NOPASSWD: ALL" >> 10_ansible
 chmod 440 10_ansible
 systemctl restart sshd
-```
-Switch to the ansible user and run the following:
-```
 su - ansible
 cd ~
 mkdir .ssh
