@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: deploy local net file
+      template:
+        src: ./network.j2
+        dest: /home/vagrant/network.txt
