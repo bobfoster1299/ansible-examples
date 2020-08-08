@@ -25,11 +25,9 @@ cd .ssh
 touch authorized_keys
 chmod 0600 authorized_keys
 ```
-Add your SSH public key to the authorized_keys file. You should then be able to run ansible commands from your machine against the managed node without using a password.
-
-Test that it's working:
+Add your SSH public key to the authorized_keys file. You should then be able to run ansible commands from your machine against the managed node without using a password. Test that it's working by running a ping (replace centos-7-1 with the hostname of your managed node):
 ```
-ansible -i inv.yml <hostname> -m ping -u ansible
+ansible -i inv.yml centos-7-1 -m ping -u ansible
 ```
 
 # Files
