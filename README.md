@@ -50,4 +50,4 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 
 [**playbooks/stop_service.yml**](playbooks/stop_service.yml) - Stop and disable service.
 
-[**playbooks/replace.yml**](playbooks/replace.yml) - Download a file and replace some lines in it with a regular expression. If the file cannot be download display a debug error. 
+[**playbooks/replace.yml**](playbooks/replace.yml) - Download a file and replace some lines in it with a regular expression. If the file cannot be downloaded display a debug error. 
