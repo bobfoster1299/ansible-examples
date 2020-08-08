@@ -1,5 +1,5 @@
 ---
-- hosts: labservers
+- hosts: all
   become: yes
   tasks:
     - name: edit index

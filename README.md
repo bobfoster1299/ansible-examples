@@ -26,8 +26,14 @@ Add your SSH public key to the authorized_keys file. You should then be able to 
 
 Test that it's working by running a ping (replace centos-7-1 with the hostname of your managed node):
 ```
-ansible -i inv.yml centos-7-1 -m ping -u ansible
+ansible -i inv.yml centos-7-1 -u ansible -m ping 
+```
+Here is an example of running the ansible playbook users.yml against just host centos-7-1:
+```
+ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 ```
 
 # Files
-**inv.yml - Inventory file
+**inv.yml** - Inventory file
+**playbooks/users** - Create multiple users 
+**playbooks/install_package.yml** - Install package, start and enable service, create file, add line to file
