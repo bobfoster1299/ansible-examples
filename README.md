@@ -46,7 +46,7 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 
 [**playbooks/block.yml**](playbooks/block.yml) - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
 
-[**playbooks/ignore_errors.yml**](playbooks/ignore_errors.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
+[**playbooks/ignore_error.yml**](playbooks/ignore_error.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
 
-[**playbooks/stop_service**](playbooks/stop_service.yml) - Stop and disable service.
+[**playbooks/stop_service.yml**](playbooks/stop_service.yml) - Stop and disable service.
 
