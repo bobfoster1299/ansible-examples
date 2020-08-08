@@ -3,7 +3,7 @@ By Rob Foster
 Updated 08/08/2020
 
 # Introduction
-This repo contains example ansible playbooks.
+This repo contains ansible example playbooks.
 
 # Instructions
 To allow a host to be managed by ansible, SSH to it and run the following commands as root:
@@ -15,7 +15,7 @@ echo "ansible    ALL=(ALL)       NOPASSWD: ALL" >> 10_ansible
 chmod 440 10_ansible
 systemctl restart sshd
 ```
-Switch the ansible user and run the following:
+Switch to the ansible user and run the following:
 ```
 su - ansible
 cd ~
