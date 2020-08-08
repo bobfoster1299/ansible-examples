@@ -65,7 +65,7 @@ Creates multiple users.
 ansible-playbook -i ../../inv.yml -u ansible tags.yaml --tags dbdeploy
 ```
 
-[playbooks/variables/*](playbooks/variables) - Defines variable, creates file from variable, references another file to add the contents:
+[playbooks/variables/*](playbooks/variables) - Assigns a file path to a variable, creates file from variable, references another file called user.lst to populate it:
 ```
 ansible-playbook -i ../../inv.yml --limit centos-7-1 -u ansible user_list.yaml -e "@users.lst"
 ```
