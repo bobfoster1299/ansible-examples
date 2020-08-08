@@ -1,0 +1,23 @@
+---
+- hosts: centos-7-1
+  become: yes
+  tasks:
+    - name: deploy app file
+      copy: 
+        src: ./apps/hello
+        dest: /var/www/html/hello
+      tags:
+        - webdeploy
+- hosts: centos-7-2
+  become: yes
+  tasks:
+    - name: create dirs
+      file:
+        path: /opt/db/scripts
+        state: directory
+    - name: deploy db script
+      copy:
+        src: ./apps/script.sql
+        dest: /opt/db/scripts/script.sql
+      tags:
+        - dbdeploy
