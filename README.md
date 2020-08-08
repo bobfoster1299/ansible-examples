@@ -34,7 +34,7 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 ```
 
 # Files
-[**inv.yml**](inv.yml) - Inventory file
+[inv.yml](inv.yml) - Inventory file
 
 [**playbooks/create_users.yml**](playbooks/create_users.yml) - Create multiple users. 
 
