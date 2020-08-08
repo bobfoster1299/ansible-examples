@@ -36,29 +36,29 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 # Files
 [inv.yml](inv.yml) - Inventory file
 
-[playbooks/create_users.yml](playbooks/create_users.yml) - Create multiple users. 
+[playbooks/create_users.yml](playbooks/create_users.yml) - Creates multiple users. 
 
-[playbooks/install_package.yml](playbooks/install_package.yml) - Install package, start and enable service, create file, append line to file.
+[playbooks/install_package.yml](playbooks/install_package.yml) - Installs package, starts and enables service, creates file, appends line to file.
 
-[playbooks/add_line_when.yml](playbooks/add_line_when.yml) - Append line to file when hostname matches.
+[playbooks/add_line_when.yml](playbooks/add_line_when.yml) - Appends line to file when hostname matches.
 
-[playbooks/register_output.yml](playbooks/register_output.yml) - Register output of task, display output to terminal, and write one element of the output to a file.
+[playbooks/register_output.yml](playbooks/register_output.yml) - Registers output of task, displays output to terminal, writes one element of the output to a file.
 
-[playbooks/block.yml](playbooks/block.yml) - Use block task to download a file from a URL and copy it to a destination. Rescue task shows if it fails.
+[playbooks/block.yml](playbooks/block.yml) - Uses block task to download a file from a URL and copy it to a destination. Rescue task shows if it fails.
 
-[playbooks/ignore_errors.yml](playbooks/ignore_errors.yml) - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
+[playbooks/ignore_errors.yml](playbooks/ignore_errors.yml) - Downloads files from multiple URLs and reports task completed successfully even if some downloads failed. 
 
-[playbooks/stop_service.yml](playbooks/stop_service.yml) - Stop and disable service.
+[playbooks/stop_service.yml](playbooks/stop_service.yml) - Stops and disables service.
 
-[playbooks/replace.yml](playbooks/replace.yml) - Download a file and replace some lines in it with a regular expression. If the file cannot be downloaded display a debug error. 
+[playbooks/replace.yml](playbooks/replace.yml) - Downloads a file and replaces some lines in it using a regular expression. If the file cannot be downloaded displays a debug error. 
 
-[playbooks/handler.yml](playbooks/handler.yml) - Replace line in file and notify handler to restart service.
+[playbooks/handler.yml](playbooks/handler.yml) - Replaces line in file and notifies handler to restart service.
 
-[playbooks/unarchive.yml](playbooks/unarchive.yml) - Install apache, start and enable service, download content from URL, unarchive it.
+[playbooks/unarchive.yml](playbooks/unarchive.yml) - Installs apache, starts and enables service, downloads content from URL, unarchives it.
 
-[playbooks/template_example/*](playbooks/template_example) - Create a file which contains facts about the target.
+[playbooks/template_example/*](playbooks/template_example) - Creates a file which contains facts about the target.
 
-[playbooks/tags/*](playbooks/tags) - Contains two host groups. On first group copy file to target. On second create directory and copy file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
+[playbooks/tags/*](playbooks/tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
 ```
 ansible-playbook -i ../../inv.yml -u ansible tags.yaml --tags dbdeploy
 ```
