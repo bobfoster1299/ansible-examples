@@ -35,5 +35,18 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 
 # Files
 **inv.yml** - Inventory file
-**playbooks/users** - Create multiple users 
-**playbooks/install_package.yml** - Install package, start and enable service, create file, add line to file
+
+**playbooks/create_users.yml** - Create multiple users. 
+
+**playbooks/install_package.yml** - Install package, start and enable service, create file, append line to file.
+
+**playbooks/add_line_when.yml** - Append line to file when hostname matches.
+
+**playbooks/register_output.yml** - Register output of task, display output to terminal, and write one element of the output to a file.
+
+**playbooks/block.yml** - Use block task to download a file from a URL and copy it to a destination. Uses a rescue task to show if it fails.
+
+**playbooks/ignore_errors.yml** - Download files from multiple URLs and report task completed successfully even if some downloads failed. 
+
+**playbooks/stop_service** - Stop and disable service.
+
