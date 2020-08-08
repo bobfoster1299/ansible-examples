@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+    - name: download transaction list
+      block:
+        - get_url:
+            url: http://centos-7-1/index.html
+            dest: /home/ansible/index.html
+        - replace:
+            path: /home/ansible/index.html
+            regexp: "^$"
+            replace: 'EMPTY'
+        - debug: msg="File downloaded"
+      rescue:
+        - debug: msg="http://centos-7-1 appears to be down. Try again later."
+      always:
+        - debug: msg="Attempt completed."
