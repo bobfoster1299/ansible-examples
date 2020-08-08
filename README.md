@@ -57,3 +57,8 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 [playbooks/unarchive.yml](playbooks/unarchive.yml) - Install apache, start and enable service, download content from URL, unarchive it.
 
 [playbooks/template_example/*](playbooks/template_example) - Create a file which contains facts about the target.
+
+[playbooks/tags/*](playbooks/tags) - Contains two host groups. On first group copy file to target. On second create directory and copy file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
+```
+ansible-playbook -i ../../inv.yml -u ansible tags.yaml --tags dbdeploy
+```
