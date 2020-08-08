@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: get files
+      get_url:
+        url: "http://{{item}}/index.html"
+        dest: "/tmp/{{item}}"
+      ignore_errors: yes
+      with_items:
+        - centos-7-1
+        - centos-7-2
+        - centos-7-3
+        - centos-7-4
