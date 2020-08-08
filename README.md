@@ -36,7 +36,7 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 # Files
 [**inv.yml**](inv.yml) - Inventory file
 
-[**playbooks/create_users.yml**](https://github.com/bobfoster1299/ansible2/blob/master/create_users.yml) - Create multiple users. 
+[**playbooks/create_users.yml**](playbooks/create_users.yml) - Create multiple users. 
 
 [**playbooks/install_package.yml**](https://github.com/bobfoster1299/ansible2/blob/master/install_package.yml) - Install package, start and enable service, create file, append line to file.
 
