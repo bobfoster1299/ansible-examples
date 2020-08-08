@@ -28,42 +28,42 @@ Test that it's working by running a ping (replace centos-7-1 with the hostname o
 ```
 ansible -i inv.yml centos-7-1 -u ansible -m ping 
 ```
-Here is an example of running the ansible playbook users.yml against just host centos-7-1:
+Here is an example of running the ansible playbook create_users.yml against just host centos-7-1:
 ```
-ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
+ansible-playbook -i inv.yml --limit centos-7-1 -u ansible create_users.yml
 ```
 
 # Files
 [inv.yml](inv.yml) - Inventory file.
 
-[playbooks/create_users.yml](playbooks/create_users.yml) - Creates multiple users. 
+[create_users.yml](create_users.yml) - Creates multiple users. 
 
-[playbooks/install_package.yml](playbooks/install_package.yml) - Installs package, starts and enables service, creates file, appends line to file.
+[install_package.yml](install_package.yml) - Installs package, starts and enables service, creates file, appends line to file.
 
-[playbooks/add_line_when.yml](playbooks/add_line_when.yml) - Appends line to file when hostname matches.
+[add_line_when.yml](add_line_when.yml) - Appends line to file when hostname matches.
 
-[playbooks/register_output.yml](playbooks/register_output.yml) - Registers output of task, displays output to terminal, writes one element of the output to a file.
+[register_output.yml](register_output.yml) - Registers output of task, displays output to terminal, writes one element of the output to a file.
 
-[playbooks/block.yml](playbooks/block.yml) - Uses block task to download a file from a URL and copy it to a destination. Rescue task shows if it fails.
+[block.yml](block.yml) - Uses block task to download a file from a URL and copy it to a destination. Rescue task shows if it fails.
 
-[playbooks/ignore_errors.yml](playbooks/ignore_errors.yml) - Downloads files from multiple URLs and reports task completed successfully even if some downloads failed. 
+[ignore_errors.yml](ignore_errors.yml) - Downloads files from multiple URLs and reports task completed successfully even if some downloads failed. 
 
-[playbooks/stop_service.yml](playbooks/stop_service.yml) - Stops and disables service.
+[stop_service.yml](stop_service.yml) - Stops and disables service.
 
-[playbooks/replace.yml](playbooks/replace.yml) - Downloads a file and replaces some lines in it using a regular expression. If the file cannot be downloaded displays a debug error. 
+[replace.yml](replace.yml) - Downloads a file and replaces some lines in it using a regular expression. If the file cannot be downloaded displays a debug error. 
 
-[playbooks/handler.yml](playbooks/handler.yml) - Replaces line in file and notifies handler to restart service.
+[handler.yml](handler.yml) - Replaces line in file and notifies handler to restart service.
 
-[playbooks/unarchive.yml](playbooks/unarchive.yml) - Installs apache, starts and enables service, downloads content from URL, unarchives it.
+[unarchive.yml](unarchive.yml) - Installs apache, starts and enables service, downloads content from URL, unarchives it.
 
-[playbooks/template_example/*](playbooks/template_example) - Creates a file which contains facts about the target.
+[template_example/*](template_example) - Creates a file which contains facts about the target.
 
-[playbooks/tags/*](playbooks/tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
+[tags/*](tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
 ```
-ansible-playbook -i ../../inv.yml -u ansible tags.yaml --tags dbdeploy
+ansible-playbook -i ../inv.yml -u ansible tags.yaml --tags dbdeploy
 ```
 
-[playbooks/variables/*](playbooks/variables) - Assigns a file path to a variable and creates a file from the variable. You reference another file called user.lst via the command line to populate the file:
+[variables/*](variables) - Assigns a file path to a variable and creates a file from the variable. You reference another file called user.lst via the command line to populate the file:
 ```
-ansible-playbook -i ../../inv.yml --limit centos-7-1 -u ansible user_list.yaml -e "@users.lst"
+ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible user_list.yaml -e "@users.lst"
 ```
