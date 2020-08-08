@@ -36,11 +36,11 @@ ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible users.yml
 # Files
 [inv.yml](inv.yml) - Inventory file
 
-[**playbooks/create_users.yml**](playbooks/create_users.yml) - Create multiple users. 
+[playbooks/create_users.yml](playbooks/create_users.yml) - Create multiple users. 
 
-[**playbooks/install_package.yml**](playbooks/install_package.yml) - Install package, start and enable service, create file, append line to file.
+[playbooks/install_package.yml](playbooks/install_package.yml) - Install package, start and enable service, create file, append line to file.
 
-[**playbooks/add_line_when.yml**](playbooks/add_line_when.yml) - Append line to file when hostname matches.
+[playbooks/add_line_when.yml](playbooks/add_line_when.yml) - Append line to file when hostname matches.
 
 [**playbooks/register_output.yml**](playbooks/register_output.yml) - Register output of task, display output to terminal, and write one element of the output to a file.
 
