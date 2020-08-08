@@ -65,5 +65,5 @@ ansible-playbook -i ../inv.yml -u ansible tags.yml --tags dbdeploy
 
 [variables/*](variables) - Assigns a file path to a variable and creates a file from the variable. You reference another file called user.lst via the command line to populate the file:
 ```
-ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible user_list.yaml -e "@users.lst"
+ansible-playbook -i ../inv.yml --limit centos-7-1 -u ansible user_list.yml -e "@users.lst"
 ```
