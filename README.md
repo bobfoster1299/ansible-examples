@@ -58,7 +58,7 @@ ansible-playbook -i inv.yml --limit centos-7-1 -u ansible create_users.yml
 
 [template_example/*](template_example) - Creates a file which contains facts about the target.
 
-[tags/*](tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tags like this:
+[tags/*](tags) - Contains two host groups. On first group copies file to target. On second creates directory and copies file into it. Some of the tasks are tagged so you can run only the tagged tasks like this:
 ```
 ansible-playbook -i ../inv.yml -u ansible tags.yml --tags dbdeploy
 ```
