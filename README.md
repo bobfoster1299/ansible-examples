@@ -8,7 +8,7 @@ This repo contains ansible example playbooks.
 # Instructions
 To allow a host to be managed by ansible, SSH to it and run the following commands as root:
 ```
-useradd ansible
+useradd -m ansible
 cd /etc/sudoers.d/
 touch 10_ansible
 echo "ansible    ALL=(ALL)       NOPASSWD: ALL" >> 10_ansible
