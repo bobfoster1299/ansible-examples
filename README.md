@@ -1,11 +1,13 @@
 By Rob Foster
 
-Updated 02/09/2020
+Updated 29/11/2020
 
-# Introduction
+## Introduction
 This repo contains ansible example playbooks.
 
-# Instructions
+<br/>
+
+## Instructions
 To allow a host to be managed by ansible, SSH to it and run the following commands as root:
 ```
 groupadd -g 1002 ansible
@@ -35,7 +37,25 @@ Here is an example of running the ansible playbook create_users.yml against just
 ansible-playbook -i inv.yml --limit centos-7-1 -u ansible create_users.yml
 ```
 
-# Files
+<br/>
+
+## Useful commands
+Install a package against all hosts:
+```
+ansible -i inv.yaml all -m yum -a "name=telnet state=latest" -b
+```
+Run a shell command against all hosts:
+```
+ansible -i inv.yml all -a "systemctl status firewalld"
+```
+Start a service on all hosts:
+```
+ansible -i inv.yml all -m service -a "name=firewalld state=started enabled=yes" -b 
+```
+
+<br/>
+
+## Files
 [inv.yml](inv.yml) - Inventory file.
 
 [create_users.yml](create_users.yml) - Creates multiple users. 
