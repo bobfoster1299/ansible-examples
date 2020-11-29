@@ -40,11 +40,11 @@ ansible-playbook -i inv.yml --limit centos-7-1 -u ansible create_users.yml
 <br/>
 
 ## Useful commands
-Install a package against all hosts:
+Install a package on all hosts:
 ```
 ansible -i inv.yaml all -m yum -a "name=telnet state=latest" -b
 ```
-Run a shell command against all hosts:
+Run a shell command on all hosts:
 ```
 ansible -i inv.yml all -a "systemctl status firewalld"
 ```
