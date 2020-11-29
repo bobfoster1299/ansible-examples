@@ -14,6 +14,7 @@ cd /etc/sudoers.d/
 touch 10_ansible
 echo "ansible    ALL=(ALL)       NOPASSWD: ALL" >> 10_ansible
 chmod 440 10_ansible
+sed -i '/AllowGroups/s/$/ ansible/' /etc/ssh/sshd_config
 systemctl restart sshd
 su - ansible
 cd ~
